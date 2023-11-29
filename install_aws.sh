@@ -10,6 +10,7 @@ fi
 
 if [[ "$architecture" == "x86_64" ]]; then
     echo "Detected 64-bit architecture"
+    sleep 3
     # Install AWS CLI for 64-bit
     curl "https://awscli.amazonaws.com/awscli-exe-linux-$architecture.zip" -o "/tmp/awscliv2.zip"
     unzip /tmp/awscliv2.zip
@@ -18,6 +19,7 @@ if [[ "$architecture" == "x86_64" ]]; then
     rm -rf /tmp/aws*
 elif [[ "$architecture" == "aarch64" ]]; then
     echo "Detected ARM architecture"
+    sleep 3
     # Install AWS CLI for ARM
     curl "https://awscli.amazonaws.com/awscli-exe-linux-$architecture.zip" -o "/tmp/awscliv2.zip"
     unzip /tmp/awscliv2.zip
